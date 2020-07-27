@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+const SALT_LENGTH = 6
+
 //密码加密
 func PasswordEncrypt(str string,salt string)  string{
 	res,_ :=  gmd5.EncryptString(str)
@@ -16,7 +18,7 @@ func PasswordEncrypt(str string,salt string)  string{
 
 //获取加密的盐
 func GeneratePasswordSalt() string {
-	l := 6
+	l := SALT_LENGTH
 	str := "0123456789abcdefghijklmnopqrstuvwxyz"
 	bytes := []byte(str)
 	result := []byte{}

@@ -1,0 +1,2 @@
+2020-07-27 15:34:54.473 [DEBU] [ 11 ms] SHOW FULL COLUMNS FROM `user`
+2020-07-27 15:34:54.476 [DEBU] [  1 ms] SELECT * FROM `user` WHERE `username`='admin2' LIMIT 1

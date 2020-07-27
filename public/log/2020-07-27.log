@@ -1,0 +1,58 @@
+2020-07-27 14:52:29.971 9960: http server started listening on [:8199]
+
+  SERVER  | DOMAIN  | ADDRESS | METHOD |       ROUTE        |                     HANDLER                     |           MIDDLEWARE             
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /hello             | kong1/router.init.0.func1                       |                                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /login/login       | kong1/controller.(*LoginController).Login       | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /login/signout     | kong1/controller.(*LoginController).SignOut     | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /login/signup      | kong1/controller.(*LoginController).SignUp      | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /upload/download   | kong1/controller.(*UploadController).Download   | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /upload/upload     | kong1/controller.(*UploadController).Upload     | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /upload/uploadshow | kong1/controller.(*UploadController).Uploadshow | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/delete       | kong1/controller.(*UserController).Delete       | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/list         | kong1/controller.(*UserController).List         | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/one          | kong1/controller.(*UserController).One          | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/store        | kong1/controller.(*UserController).Store        | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/update       | kong1/controller.(*UserController).Update       | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+
+
+  SERVER  | DOMAIN  | ADDRESS | METHOD |       ROUTE        |                     HANDLER                     |           MIDDLEWARE             
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /hello             | kong1/router.init.0.func1                       |                                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /login/login       | kong1/controller.(*LoginController).Login       | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /login/signout     | kong1/controller.(*LoginController).SignOut     | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /login/signup      | kong1/controller.(*LoginController).SignUp      | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /upload/download   | kong1/controller.(*UploadController).Download   | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /upload/upload     | kong1/controller.(*UploadController).Upload     | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /upload/uploadshow | kong1/controller.(*UploadController).Uploadshow | middleware.Cors                  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/delete       | kong1/controller.(*UserController).Delete       | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/list         | kong1/controller.(*UserController).List         | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/one          | kong1/controller.(*UserController).One          | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/store        | kong1/controller.(*UserController).Store        | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+  default | default | :8199   | ALL    | /user/update       | kong1/controller.(*UserController).Update       | middleware.Cors,middleware.Auth  
+----------|---------|---------|--------|--------------------|-------------------------------------------------|----------------------------------
+
+2020-07-27 14:56:23.058 2124: http server started listening on [:8199]

@@ -21,15 +21,20 @@ func init()  {
 	// 分组路由注册方式
 	s.Group("/", func(group *ghttp.RouterGroup) {
 		group.Middleware(middleware.Cors)
+		//group.Middleware(middleware.Log)
 
 		_loginController := new(controller.LoginController)
 		group.ALL("/login", _loginController)
+
+		_uploadController := new(controller.UploadController)
+		group.ALL("/upload",_uploadController)
 
 		group.Group("/", func(group *ghttp.RouterGroup) {
 			group.Middleware(middleware.Auth)
 
 			_userController := new(controller.UserController)
 			group.ALL("/user", _userController)
+
 
 		})
 	})

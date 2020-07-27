@@ -4,6 +4,8 @@ import (
 	"github.com/gogf/gf/net/ghttp"
 )
 
+var responseJson *JsonResponse
+
 // 数据返回通用JSON数据结构
 type JsonResponse struct {
 	Code    int         `json:"code"`    // 错误码((0:成功, 1:失败, >1:错误码))
@@ -22,11 +24,24 @@ func Json(r *ghttp.Request, code int, message string, data ...interface{}) {
 		Message: message,
 		Data:    responseData,
 	})
+	SetResponseJson(&JsonResponse{
+		Code:    code,
+		Message: message,
+		Data:    responseData,
+	})
 }
 
 // 返回JSON数据并退出当前HTTP执行函数。
 func JsonExit(r *ghttp.Request, err int, msg string, data ...interface{}) {
 	Json(r, err, msg, data...)
 	r.Exit()
+}
+
+func SetResponseJson(j *JsonResponse)  {
+	responseJson = j
+}
+
+func GetResponseJson()  *JsonResponse {
+	return responseJson
 }
 

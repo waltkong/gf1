@@ -8,5 +8,6 @@ import (
 //
 func Log(r *ghttp.Request) {
 	r.Middleware.Next()
+
 	g.Log().Println(r.Response.Status, r.URL.Path)
 }
